@@ -1,7 +1,7 @@
 Name: Eric Brusky
  Project Title: CRUD Core
  Project Stack: MERN
- GitHub Repo Link: 
+ GitHub Repo Link: https://github.com/Watchitgo333/CRUDCore
 
  Project Description:
 	An music distribution site to buy, sell, listen, upload and review underground metal, grindcore, punk music.
