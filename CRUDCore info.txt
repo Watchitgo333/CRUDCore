@@ -1,0 +1,25 @@
+Name: Eric Brusky
+ Project Title: CRUD Core
+ Project Stack: MERN
+ GitHub Repo Link: 
+
+ Project Description:
+	An music distribution site to buy, sell, listen, upload and review underground metal, grindcore, punk music.
+ 
+New Programming Concept(s) I'm Planning to Learn:
+	Utilizing an API, providing a Login & Registration for MERN.
+
+Week 1 Features (to show at Review during Week 2)
+	-login/registration 
+	-CRUD for adding your band to the site
+
+Week 2 Features (to show at the first office hour/lecture of Week 3)
+	-Utilizing an API for music streaming
+	-CRUD for an album or ep to be reviewed by other users.
+	-Upload album or ep cover to be reviewed
+
+Product Backlog (If I have more time after completing my MVP, I'll start to work on...)
+	-A feature to upload audio
+	-Follow Bands
+	-Bands can be filtered by most loves
+	-Profile section
