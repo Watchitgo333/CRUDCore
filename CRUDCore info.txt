@@ -23,3 +23,4 @@ Product Backlog (If I have more time after completing my MVP, I'll start to work
 	-Follow Bands
 	-Bands can be filtered by most loves
 	-Profile section
+	-May switch to java backend
