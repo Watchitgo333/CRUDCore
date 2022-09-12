@@ -1,4 +1,5 @@
 const Band = require('../models/band.model');
+const Discography = require('../models/discography.model');
 
 const createBand = (req, res) => {
     console.log("body--->", req.body)
@@ -59,6 +60,16 @@ const deleteBandById = (req,res) =>{
             res.status(400).json(err);
         })
 }
+
+const addAlbumToBandDiscog = (req, res) => {
+    Band.findByIdAndUpdate(
+        albumId,
+    )
+}
+
+// const getAlbumsById = (req,res) =>{
+//     Discography.findById
+// }
 
 module.exports = {
     createBand,

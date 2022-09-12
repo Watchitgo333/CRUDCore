@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import ArtistList from './components/ArtistList';
 import Main from './views/Main';
 import ArtistDetails from './components/ArtistDetails';
+import ArtistUpdateForm from './components/ArtistUpdateForm';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path='/artists' element={<ArtistList/>}/>
             <Route path='/artists/create' element={<Main/>}/>
             <Route path='/artist/:id' element={<ArtistDetails/>}/>
+            <Route path='/artist/edit/:id' element={<ArtistUpdateForm/>}/>
           </Routes>
       </BrowserRouter>
     </div>

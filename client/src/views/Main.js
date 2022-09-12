@@ -32,6 +32,7 @@ const Main = () => {
                 initialGenre=""
                 initialDescription=""
                 initialInfluences=""
+                formHeading="Create Artist"
                 />
         </div>
     )

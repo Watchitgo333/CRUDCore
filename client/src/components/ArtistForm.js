@@ -13,7 +13,8 @@ const ArtistForm = (props) => {
         initialName,
         initialGenre,
         initialDescription,
-        initialInfluences
+        initialInfluences,
+        formHeading
     } = props
 
     const [name, setName] = useState(initialName)
@@ -38,13 +39,14 @@ const ArtistForm = (props) => {
                     <Grid>
                         <Grid item xs={3}>
                             <Typography variant='h2'>
-                                Create Artist
+                                {formHeading}
                             </Typography>
                             <TextField 
                                 sx={{marginTop:3}}
                                 fullWidth
                                 variant="outlined"
                                 label="Name"
+                                value={name}
                                 onChange={(e)=>{setName(e.target.value)}}
                             />
                             <TextField 
@@ -52,6 +54,7 @@ const ArtistForm = (props) => {
                                 fullWidth
                                 variant='outlined'
                                 label='Genre'
+                                value={genre}
                                 onChange={(e)=>{setGenre(e.target.value)}}
                             />
                         </Grid>
@@ -62,6 +65,7 @@ const ArtistForm = (props) => {
                                 multiline
                                 label='Description'
                                 rows={4}
+                                value={description}
                                 onChange={(e)=>{setDescription(e.target.value)}}
                             />
                             <TextField
