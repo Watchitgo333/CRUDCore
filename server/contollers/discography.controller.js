@@ -1,10 +1,12 @@
 const Discography = require('../models/discography.model');
+// const Band = require('../models/band.model');
 
-const addToBandDiscog = (req, res) => {
+const addBandToDiscog = (req, res) => {
     console.log("body--->", req.body)
     Discography.create(req.body)
         .then((newAlbum)=>{
             res.json(newAlbum);
+            console.log(newAlbum._id)
         })
         .catch((err)=>{
             console.log("Error in addToBandDiscog===>", err);
@@ -13,7 +15,7 @@ const addToBandDiscog = (req, res) => {
 }
 
 const getAllAlbumsInDb = (req, res) => {
-    Discography.find({})
+    Discography.find({}).populate("artist")
         .then((allAlbums)=>{
             console.log(allAlbums);
             res.json(allAlbums);
@@ -61,7 +63,7 @@ const deleteAlbumById = (req,res) =>{
 }
 
 module.exports = {
-    addToBandDiscog,
+    addBandToDiscog,
     getAllAlbumsInDb,
     getAlbumById,
     updateAlbumById,

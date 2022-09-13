@@ -5,6 +5,7 @@ import ArtistList from './components/ArtistList';
 import Main from './views/Main';
 import ArtistDetails from './components/ArtistDetails';
 import ArtistUpdateForm from './components/ArtistUpdateForm';
+import Subsidary from './views/Subsidary';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/artists/create' element={<Main/>}/>
             <Route path='/artist/:id' element={<ArtistDetails/>}/>
             <Route path='/artist/edit/:id' element={<ArtistUpdateForm/>}/>
+            <Route path='/artist/:id/create/discog' element={<Subsidary/>}/>
           </Routes>
       </BrowserRouter>
     </div>

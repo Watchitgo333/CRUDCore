@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 const ArtistList = () => {
 
     const [artists, setArtists] = useState([])
+    const [loaded, setLoaded] = useState(false)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -21,6 +22,7 @@ const ArtistList = () => {
         .then((res)=>{
             console.log(res)
             setArtists(res.data)
+            setLoaded(true)
         })
         .catch((err)=>{console.log(err)})
     }, [])
@@ -32,18 +34,29 @@ const ArtistList = () => {
     return(
         <div className='container'>
             <Container>
+                    {
+                        loaded && (artists)>=0 ? 
+                            <Typography variant='h4'>No artists to display, <span>
+                                <NavLink className="nav-link active" aria-current="page" to="/artists/create">
+                                    create one?
+                                </NavLink>
+                                </span> 
+                            </Typography>
+                            :
+                            <Typography variant='h3'>Check these new artists!</Typography>
+                    }
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid alignItems="center" container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         { 
                             artists.map((artist,index)=>{
                                 return(
-                                    <Grid  xs={2} sm={4} md={4} key={index}>
-                                        <Card sx={{ marginBottom:"20px", maxWidth:250}} 
+                                    <Grid key={index}>
+                                        <Card sx={{ margin:"30px", maxWidth:350}} 
                                                 onClick={(e)=>{nav(artist._id)}} >
                                             <CardActionArea>
                                                 <CardMedia
                                                     component="img"
-                                                    height="140"
+                                                    height="150"
                                                     image={antimusic}
                                                     alt="Artist cover"
                                                 />

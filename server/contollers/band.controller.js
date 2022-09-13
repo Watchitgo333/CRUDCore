@@ -14,7 +14,7 @@ const createBand = (req, res) => {
 }
 
 const getBands = (req, res) => {
-    Band.find({})
+    Band.find({}).populate("discography")
         .then((bands)=>{
             console.log(bands);
             res.json(bands);
@@ -26,7 +26,7 @@ const getBands = (req, res) => {
 }
 
 const getBandById = (req, res) =>{
-    Band.findById(req.params.id)
+    Band.findById(req.params.id).populate("discography")
         .then((band)=>{
             console.log(band);
             res.json(band);
@@ -62,9 +62,15 @@ const deleteBandById = (req,res) =>{
 }
 
 const addAlbumToBandDiscog = (req, res) => {
-    Band.findByIdAndUpdate(
-        albumId,
-    )
+    Band.findByIdAndUpdate(req.params.id, {$push:{discography: req.body}} ,{new:true, runValidators:true})
+        .then((updateBand)=>{
+            console.log(updateBand)
+            res.json(updateBand)
+        })
+        .catch((err)=>{
+            console.log("Error in updateBandById--->",req.body,"!!!!!!!", err);
+            res.status(400).json({message:"ERROR--->", error:err.errors});
+        })
 }
 
 // const getAlbumsById = (req,res) =>{
@@ -76,5 +82,6 @@ module.exports = {
     getBands,
     getBandById,
     updateBandById,
-    deleteBandById
+    deleteBandById,
+    addAlbumToBandDiscog
 }

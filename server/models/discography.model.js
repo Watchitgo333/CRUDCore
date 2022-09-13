@@ -11,9 +11,6 @@ const DiscographySchema = new mongoose.Schema(
         tracks:[{
             name:{
                 type:String
-            },
-            length:{
-                type:Number
             }
         }]
     },
