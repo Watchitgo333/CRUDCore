@@ -17,6 +17,9 @@ const BandSchema = new mongoose.Schema(
         influences:{
             type:String,
         },
+        image:{
+            type:String,
+        },
         discography:[
             {
                 type: mongoose.Schema.Types.ObjectId, ref:'Discography'

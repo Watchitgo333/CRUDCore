@@ -54,12 +54,21 @@ const ArtistList = () => {
                                         <Card sx={{ margin:"30px", maxWidth:350}} 
                                                 onClick={(e)=>{nav(artist._id)}} >
                                             <CardActionArea>
+                                                {artist.image ? 
                                                 <CardMedia
                                                     component="img"
                                                     height="150"
-                                                    image={antimusic}
+                                                    image={artist.image}
                                                     alt="Artist cover"
                                                 />
+                                            :
+                                                <CardMedia
+                                                component="img"
+                                                height="150"
+                                                image={antimusic}
+                                                alt="Artist cover"
+                                                />
+                                            }
                                                 <CardContent>
                                                     <Typography gutterBottom variant='h5' component="div">
                                                         {artist.name}

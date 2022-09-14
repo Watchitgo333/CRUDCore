@@ -48,6 +48,7 @@ const ArtistUpdateForm = (props) => {
                             initialGenre={artist.genre}
                             initialDescription={artist.description}
                             initialInfluences={artist.influences}
+                            initialImage={artist.image}
                             formHeading={"Edit "+artist.name}
                         />
             }

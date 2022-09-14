@@ -21,6 +21,7 @@ const Subsidary = (props) => {
             .catch((err)=>{
                 console.log(err)
                 setErrors(err.response.data.error)
+                console.log(errors)
             })
     }
 
@@ -44,7 +45,8 @@ const Subsidary = (props) => {
                 setErrors={setErrors}
                 initialArtist={id}
                 initialTitle=""
-                initialTracks=""
+                initialImage=""
+                initialTrack=""
                 formHeading="Add to Discography"
                 />
         </div>

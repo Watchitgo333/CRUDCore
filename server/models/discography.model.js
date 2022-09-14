@@ -8,10 +8,12 @@ const DiscographySchema = new mongoose.Schema(
             type:String,
             required:[true, "Title is required."]
         },
+        image:{
+            type:String
+
+        },
         tracks:[{
-            name:{
-                type:String
-            }
+            type:String
         }]
     },
     {timestamps:true}

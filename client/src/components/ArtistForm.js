@@ -13,6 +13,7 @@ const ArtistForm = (props) => {
         initialGenre,
         initialDescription,
         initialInfluences,
+        initialImage,
         formHeading
     } = props
 
@@ -20,6 +21,7 @@ const ArtistForm = (props) => {
     const [genre, setGenre] = useState(initialGenre)
     const [description, setDescription] = useState(initialDescription)
     const [influences, setInfluences] = useState(initialInfluences)
+    const [image, setImage] = useState(initialImage)
 
     const onSubmitHandler = (e) => {
         e.preventDefault()
@@ -28,6 +30,7 @@ const ArtistForm = (props) => {
             genre,
             description,
             influences,
+            image
         })
     }
 
@@ -48,6 +51,8 @@ const ArtistForm = (props) => {
                                 value={name}
                                 onChange={(e)=>{setName(e.target.value)}}
                             />
+                            {errors.name ? <span style={{color:"#FF0000"}}>{errors.name.message}</span>:null}
+
                             <TextField 
                                 sx={{marginTop:3}}
                                 fullWidth
@@ -56,6 +61,8 @@ const ArtistForm = (props) => {
                                 value={genre}
                                 onChange={(e)=>{setGenre(e.target.value)}}
                             />
+                            {errors.genre ? <span style={{color:"#FF0000"}}>{errors.genre.message}</span>:null}
+
                         </Grid>
                         <Grid item xs={3}>
                             <TextField
@@ -67,14 +74,24 @@ const ArtistForm = (props) => {
                                 value={description}
                                 onChange={(e)=>{setDescription(e.target.value)}}
                             />
+                            {errors.description ? <span style={{color:"#FF0000"}}>{errors.description.message}</span>:null}
+
                             <TextField
                                 sx={{marginTop:3}}
                                 fullWidth
                                 multiline
-                                label='Influences'
+                                label='Influences (optional)'
                                 rows={4}
                                 value={influences}
                                 onChange={(e)=>{setInfluences(e.target.value)}}
+                            />
+                            <TextField 
+                                sx={{marginTop:3}}
+                                fullWidth
+                                variant='outlined'
+                                label='Image (optional)'
+                                value={image}
+                                onChange={(e)=>{setImage(e.target.value)}}
                             />
                             <Button
                                 sx={{marginTop:3, bgcolor:'#000000'}} 
