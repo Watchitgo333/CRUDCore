@@ -20,6 +20,11 @@ const BandSchema = new mongoose.Schema(
         image:{
             type:String,
         },
+        users:[
+            {
+                type: mongoose.Schema.Types.ObjectId, ref:'User'
+            }
+        ],
         discography:[
             {
                 type: mongoose.Schema.Types.ObjectId, ref:'Discography'
