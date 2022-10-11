@@ -62,7 +62,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ### Built With
 
 * [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
+* [![React][React.js]https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
