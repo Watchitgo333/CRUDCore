@@ -12,9 +12,9 @@
     <br />
     <a href="https://github.com/Watchitgo333/CRUDCore">Demo Coming Soon</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Watchitgo333/CRUDCore/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Watchitgo333/CRUDCore/issues">Request Feature</a>
   </p>
 </div>
 
